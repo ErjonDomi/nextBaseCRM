@@ -1,7 +1,13 @@
 package com.nextBaseCRM.Erjon;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Task1 {
     public static void main(String[] args) {
-        //Task1
+        WebDriverManager.chromedriver().setup();
+
+
+
+
     }
 }
