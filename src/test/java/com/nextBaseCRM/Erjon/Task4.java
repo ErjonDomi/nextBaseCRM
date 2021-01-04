@@ -26,7 +26,7 @@ public class Task4 {
         Thread.sleep(1000);
         driver.findElement(By.className("login-btn")).click();//locating and clicking on login button
 
-        WebElement event = driver.findElement(By.id("feed-add-post-form-tab-calendar"));//locating element button
+        WebElement event = driver.findElement(By.id("feed-add-post-form-tab-calendar"));//locating event button
         event.click();
         Thread.sleep(2000);
 
