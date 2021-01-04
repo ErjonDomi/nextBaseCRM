@@ -32,7 +32,7 @@ public class Task3 {
         Thread.sleep(2000);
 
         //locating the element name input box
-        WebElement eventName = driver.findElement(By.xpath("//*[@id=\"feed-cal-contcal_3Jcl\"]/div[1]//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
+        WebElement eventName = driver.findElement(By.xpath("//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
@@ -41,48 +41,48 @@ public class Task3 {
         textMessage.sendKeys("Hello");
 
         //locating start date input box
-        WebElement startDate = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[1]//input[@id='feed-cal-event-fromcal_3Jcl' and @name='DATE_FROM']"));
+        WebElement startDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-fromcal_3Jcl' and @name='DATE_FROM']"));
         startDate.clear();//clearing the input box
         startDate.sendKeys("02/15/2021"); //setting date to 02/15/2021
         Thread.sleep(1000);
 
         //locating start time input box
-        WebElement startTime = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[2]//input[@id='feed_cal_event_from_timecal_3Jcl' and @name='TIME_FROM_']"));
+        WebElement startTime = driver.findElement(By.xpath("//input[@id='feed_cal_event_from_timecal_3Jcl' and @name='TIME_FROM_']"));
         startTime.clear();//clearing the input box
         startTime.sendKeys("10:00 am"); //setting start time to 10:00 am
         Thread.sleep(1000);
 
         //locating end date input box
-        WebElement endDate = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[4]//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
+        WebElement endDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
         endDate.clear();//clearing the input box
         endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
         Thread.sleep(1000);
 
 
         //locating end time input box
-        WebElement endTime = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[5]//input[@id='feed_cal_event_to_timecal_3Jcl' and @name='TIME_TO_']"));
+        WebElement endTime = driver.findElement(By.xpath("//input[@id='feed_cal_event_to_timecal_3Jcl' and @name='TIME_TO_']"));
         endTime.clear();//clearing the input box
         endTime.sendKeys("02:00 pm"); //setting end time to 02:00 pm
         Thread.sleep(1000);
 
         //locating set reminder check box and clicking in it
-        WebElement setReminderCheckBox = driver.findElement(By.xpath("//*[@id=\"feed-cal-reminder-contcal_3Jcl\"]//input[@ class='feed-event-rem-ch' and @name='EVENT_REMIND' and @type='checkbox'] "));
+        WebElement setReminderCheckBox = driver.findElement(By.xpath("//input[@ class='feed-event-rem-ch' and @name='EVENT_REMIND' and @type='checkbox'] "));
         // setReminderCheckBox.click();
         Thread.sleep(1000);
 
         //Setting the reminder for minutes or hours or days
-        Select setReminder = new Select(driver.findElement(By.xpath("//*[@id=\"feed-cal-reminder-contcal_3Jcl\"]/span//select[@id='event-remind_typecal_3Jcl' and @name='EVENT_REMIND_TYPE']")));
+        Select setReminder = new Select(driver.findElement(By.xpath("//select[@id='event-remind_typecal_3Jcl' and @name='EVENT_REMIND_TYPE']")));
         setReminder.selectByVisibleText("days");
         Thread.sleep(1000);
 
         //Setting the count for minutes or hours or days
-        WebElement countOFMinHourDays = driver.findElement(By.xpath("//*[@id=\"feed-cal-reminder-contcal_3Jcl\"]/span//input[@class='calendar-inp' and @name='EVENT_REMIND_COUNT']"));
+        WebElement countOFMinHourDays = driver.findElement(By.xpath("//input[@class='calendar-inp' and @name='EVENT_REMIND_COUNT']"));
         countOFMinHourDays.clear();//clearing the input box
         countOFMinHourDays.sendKeys("2"); //setting the reminder for 2 days
         Thread.sleep(1000);
 
         //locating event location input box
-        WebElement eventLocation = driver.findElement(By.xpath("//*[@id=\"feed-cal-contcal_3Jcl\"]/div[3]/div[4]//input[@id='event-locationcal_3Jcl' and @class='calendar-inp calendar-inp-time calendar-inp-loc']"));
+        WebElement eventLocation = driver.findElement(By.xpath("//input[@id='event-locationcal_3Jcl' and @class='calendar-inp calendar-inp-time calendar-inp-loc']"));
         eventLocation.sendKeys("Central Meeting Room");//setting the meeting location
         Thread.sleep(1000);
 

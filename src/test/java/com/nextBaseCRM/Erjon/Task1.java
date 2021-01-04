@@ -29,7 +29,7 @@ public class Task1 {
         Thread.sleep(1000);
 
         //locating the element name input box
-        WebElement eventName=  driver.findElement(By.xpath("//*[@id=\"feed-cal-contcal_3Jcl\"]/div[1]//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
+        WebElement eventName=  driver.findElement(By.xpath("//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
