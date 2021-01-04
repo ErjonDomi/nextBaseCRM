@@ -1,0 +1,14 @@
+
+USER STORY:
+As a user, I should be able to send an event.
+
+ACCEPTANCE CRITERIA:
+1. Verify users can send events by clicking ""EVENT"" tab with at least an event name.
+2. Verify users can cancel events.
+3. Verify users can check timers
+4. Verify users can choose all day for the event time"
+
+Task1--> relates to 1. Verify users can send events by clicking ""EVENT"" tab with at least an event name.
+Task2--> relates to 2.Verify users can send events by clicking ""SEND"" button with all the input boxes filled.
+Task3--> relates to 3. Verify users can cancel events and Verify users can cancel events by clicking ""CANCEL"" button with all the input boxes filled.
+Task4--> relates to 4. Verify users can choose all day for the event time"

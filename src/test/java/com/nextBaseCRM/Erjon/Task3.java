@@ -8,10 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-//"1. Verify users can send events by clicking ""SEND"" button with all the input boxes filled.
+//Verify users can cancel events and Verify users can cancel events by clicking ""CANCEL"" button with all the input boxes filled.
 
-
-public class Task2 {
+public class Task3 {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://login2.nextbasecrm.com/");
@@ -97,14 +96,10 @@ public class Task2 {
         selectedMembers.click();
         Thread.sleep(1000);
 
-
-        //locating send button and clicking on it
-        WebElement sendButton = driver.findElement(By.id("blog-submit-button-save"));
-        // sendButton.click();
-
+        //locating cancel button and clicking on it
+        WebElement cancelButton = driver.findElement(By.id("blog-submit-button-cancel"));
+        cancelButton.click();
 
 
     }
 }
-
-

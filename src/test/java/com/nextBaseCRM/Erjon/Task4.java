@@ -1,5 +1,4 @@
 package com.nextBaseCRM.Erjon;
-
 import com.nextBaseCRM.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -8,10 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-//"1. Verify users can send events by clicking ""SEND"" button with all the input boxes filled.
+//4. Verify users can choose all day for the event time"
 
-
-public class Task2 {
+public class Task4 {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
         driver.get("http://login2.nextbasecrm.com/");
@@ -47,11 +45,13 @@ public class Task2 {
         startDate.sendKeys("02/15/2021"); //setting date to 02/15/2021
         Thread.sleep(1000);
 
-        //locating start time input box
+       /* //locating start time input box
         WebElement startTime = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[2]//input[@id='feed_cal_event_from_timecal_3Jcl' and @name='TIME_FROM_']"));
         startTime.clear();//clearing the input box
         startTime.sendKeys("10:00 am"); //setting start time to 10:00 am
         Thread.sleep(1000);
+
+        */
 
         //locating end date input box
         WebElement endDate = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[4]//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
@@ -60,10 +60,16 @@ public class Task2 {
         Thread.sleep(1000);
 
 
-        //locating end time input box
+       /* //locating end time input box
         WebElement endTime = driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[1]/span[5]//input[@id='feed_cal_event_to_timecal_3Jcl' and @name='TIME_TO_']"));
         endTime.clear();//clearing the input box
         endTime.sendKeys("02:00 pm"); //setting end time to 02:00 pm
+        Thread.sleep(1000);
+
+        */
+        //Locating All day checkbox and clicking on it
+        WebElement selectAllDay= driver.findElement(By.xpath("//*[@id=\"feed-cal-from-to-contcal_3Jcl\"]/span[2]//input[@id='event-full-daycal_3Jcl' and @name='EVENT_FULL_DAY']"));
+        selectAllDay.click();
         Thread.sleep(1000);
 
         //locating set reminder check box and clicking in it
@@ -100,11 +106,7 @@ public class Task2 {
 
         //locating send button and clicking on it
         WebElement sendButton = driver.findElement(By.id("blog-submit-button-save"));
-        // sendButton.click();
-
-
+         sendButton.click();
 
     }
 }
-
-
