@@ -18,9 +18,9 @@ public class AamirTask01 {
 
         //clicking the pool feature
       driver.findElement(By.xpath("//*[@id=\"feed-add-post-form-tab-vote\"]/span")).click();
+        driver.switchTo().frame(0);
 
-
-      driver.findElement(By.xpath("//*[@id=\"question_0\"]")).click();
+        driver.findElement(By.xpath("//input[@type='text' and @name='UF_BLOG_POST_VOTE_n0_DATA[QUESTIONS][0][QUESTION]' and @id='question_0']")).click();
 
     }
 }

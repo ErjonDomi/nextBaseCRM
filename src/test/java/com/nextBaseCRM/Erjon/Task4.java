@@ -56,7 +56,7 @@ public class Task4 {
         //locating end date input box
         WebElement endDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
         endDate.clear();//clearing the input box
-        endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
+       // endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
         Thread.sleep(1000);
 
 

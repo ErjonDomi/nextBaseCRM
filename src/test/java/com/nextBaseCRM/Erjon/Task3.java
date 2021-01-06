@@ -36,18 +36,24 @@ public class Task3 {
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
-        WebElement textMessage = driver.findElement(By.xpath("/html/body"));
+/*
+        WebElement textMessage = driver.findElement(By.xpath("//body[@style='min-height: 104px;']"));
+        driver.switchTo().frame(1);
         textMessage.click();
         textMessage.sendKeys("Hello");
 
+ */
+
+
+
         //locating start date input box
-        WebElement startDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-fromcal_3Jcl' and @name='DATE_FROM']"));
+        WebElement startDate = driver.findElement(By.xpath("//input[@name='DATE_FROM']"));
         startDate.clear();//clearing the input box
         startDate.sendKeys("02/15/2021"); //setting date to 02/15/2021
         Thread.sleep(1000);
 
         //locating start time input box
-        WebElement startTime = driver.findElement(By.xpath("//input[@id='feed_cal_event_from_timecal_3Jcl' and @name='TIME_FROM_']"));
+        WebElement startTime = driver.findElement(By.xpath("//input[@name='TIME_FROM_']"));
         startTime.clear();//clearing the input box
         startTime.sendKeys("10:00 am"); //setting start time to 10:00 am
         Thread.sleep(1000);
