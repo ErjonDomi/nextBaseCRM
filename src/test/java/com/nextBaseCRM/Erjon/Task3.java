@@ -36,13 +36,15 @@ public class Task3 {
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
-/*
-        WebElement textMessage = driver.findElement(By.xpath("//body[@style='min-height: 104px;']"));
-        driver.switchTo().frame(1);
-        textMessage.click();
-        textMessage.sendKeys("Hello");
 
- */
+
+       /* driver.switchTo().frame("//*[@id=\"bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl\"]/iframe");
+        WebElement textMessage = driver.switchTo().activeElement();
+       // textMessage.click();
+        textMessage.sendKeys("Hello");
+        driver.switchTo().defaultContent();
+
+        */
 
 
 
@@ -60,8 +62,8 @@ public class Task3 {
 
         //locating end date input box
         WebElement endDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
-        endDate.clear();//clearing the input box
-        endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
+        //endDate.clear();//clearing the input box
+        //endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
         Thread.sleep(1000);
 
 
@@ -88,7 +90,7 @@ public class Task3 {
         Thread.sleep(1000);
 
         //locating event location input box
-        WebElement eventLocation = driver.findElement(By.xpath("//input[@id='event-locationcal_3Jcl' and @class='calendar-inp calendar-inp-time calendar-inp-loc']"));
+        WebElement eventLocation = driver.findElement(By.xpath("//input[@id='event-locationcal_3Jcl' or @class='calendar-inp calendar-inp-time calendar-inp-loc']"));
         eventLocation.sendKeys("Central Meeting Room");//setting the meeting location
         Thread.sleep(1000);
 
@@ -109,3 +111,4 @@ public class Task3 {
 
     }
 }
+////*[@id="bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl"]/iframe
