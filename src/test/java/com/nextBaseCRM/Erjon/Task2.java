@@ -30,7 +30,7 @@ public class Task2 {
 
         WebElement event = driver.findElement(By.id("feed-add-post-form-tab-calendar"));//locating event button
         event.click();
-        Thread.sleep(2000);
+        Thread.sleep(1000);
 
         //locating the element name input box
         WebElement eventName = driver.findElement(By.xpath("//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
@@ -55,8 +55,8 @@ public class Task2 {
 
         //locating end date input box
         WebElement endDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-tocal_3Jcl' and @name='DATE_TO']"));
-        endDate.clear();//clearing the input box
-        endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
+       // endDate.clear();//clearing the input box
+      //  endDate.sendKeys("02/15/2021");//setting date to 02/15/2021
         Thread.sleep(1000);
 
 
