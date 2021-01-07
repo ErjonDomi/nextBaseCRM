@@ -8,6 +8,13 @@ ACCEPTANCE CRITERIA:
 3. Verify users can check timers
 4. Verify users can choose all day for the event time"
 
+SCENARIOS:
+1. users  (hr, marketing and helpdesk)  send event.
+2. users can cancel events with ""CANCEL"" button
+3. users can check modify event starting and ending time
+4. users can check All day".
+
+
 Task1--> relates to 1. Verify users can send events by clicking ""EVENT"" tab with at least an event name.
 Task2--> relates to 2.Verify users can send events by clicking ""SEND"" button with all the input boxes filled.
 Task3--> relates to 3. Verify users can cancel events and Verify users can cancel events by clicking ""CANCEL"" button with all the input boxes filled.
