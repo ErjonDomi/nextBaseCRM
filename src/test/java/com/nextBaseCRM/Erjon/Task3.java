@@ -36,17 +36,11 @@ public class Task3 {
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
-
-
-       /* driver.switchTo().frame("//*[@id=\"bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl\"]/iframe");
-        WebElement textMessage = driver.switchTo().activeElement();
-       // textMessage.click();
-        textMessage.sendKeys("Hello");
-        driver.switchTo().defaultContent();
-
-        */
-
-
+        WebElement frame=driver.findElement(By.xpath("//*[@id=\"bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl\"]/iframe"));
+        driver.switchTo().frame(frame);
+        driver.findElement(By.xpath("/html/body")).sendKeys("Hello");
+        driver.switchTo().parentFrame();
+        Thread.sleep(1000);
 
         //locating start date input box
         WebElement startDate = driver.findElement(By.xpath("//input[@name='DATE_FROM']"));
