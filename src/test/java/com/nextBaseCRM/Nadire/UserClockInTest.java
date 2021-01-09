@@ -1,6 +1,7 @@
 package com.nextBaseCRM.Nadire;
 
 import com.nextBaseCRM.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -12,16 +13,26 @@ public class UserClockInTest {
         WebDriver driver = WebDriverFactory.getDriver("chrome");
 
         //open url
-        driver.get("login2.nextbasecrm.com");
+        driver.get("http://login2.nextbasecrm.com/");
 
-        driver.manage().window().maximize();
-
-
+        WebElement username = driver.findElement(By.name("USER_LOGIN"));
 
         //log in
-        
+        username.sendKeys("helpdesk31@cybertekschool.com");
+
+        WebElement password = driver.findElement(By.name("USER_PASSWORD"));
+        password.sendKeys("UserUser");
 
         // click...
+        driver.findElement(By.className("login-btn")).click();
+
+        // ClockIn
+
+
+
+
+
+
     }
 
 }

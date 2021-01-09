@@ -35,9 +35,11 @@ public class Task4 {
         eventName.sendKeys("Cybertek");//element name set to Cybertek
         Thread.sleep(1000);
 
-        WebElement textMessage = driver.findElement(By.xpath("/html/body"));
-        textMessage.click();
-        textMessage.sendKeys("Hello");
+        WebElement frame=driver.findElement(By.xpath("//*[@id=\"bx-html-editor-iframe-cnt-oCalEditorcal_3Jcl\"]/iframe"));
+        driver.switchTo().frame(frame);
+        driver.findElement(By.xpath("/html/body")).sendKeys("Hello Batch 21");
+        driver.switchTo().parentFrame();
+        Thread.sleep(1000);
 
         //locating start date input box
         WebElement startDate = driver.findElement(By.xpath("//input[@id='feed-cal-event-fromcal_3Jcl' and @name='DATE_FROM']"));
