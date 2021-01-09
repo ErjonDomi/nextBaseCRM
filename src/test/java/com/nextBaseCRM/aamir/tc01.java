@@ -22,14 +22,25 @@ public class tc01 {
         Thread.sleep(1000);
         WebElement frame=driver.findElement(By.xpath("//*[@id=\"bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm\"]/iframe"));
         driver.switchTo().frame(frame);
-        driver.findElement(By.xpath("/html/body")).sendKeys("Question and Answer1");
+        driver.findElement(By.xpath("/html/body")).sendKeys("Question and Answer12");
         driver.switchTo().parentFrame();
 
 //filling the values using send keys and clicking send button
         driver.findElement(By.xpath("//input[@name='UF_BLOG_POST_VOTE_n0_DATA[QUESTIONS][0][QUESTION]']")).sendKeys("Question1");
 driver.findElement(By.xpath("//input[@name='UF_BLOG_POST_VOTE_n0_DATA[QUESTIONS][0][ANSWERS][0][MESSAGE]']")).sendKeys("Answer 1");
         driver.findElement(By.xpath("//*[@id='answer_0__1_']")).sendKeys("Answer 2");
+
+//Verifying if  users can check "allow multiple Choice"
+        WebElement checkbox=driver.findElement(By.xpath("//input[@name='UF_BLOG_POST_VOTE_n0_DATA[QUESTIONS][0][MULTI]']"));
+        checkbox.click();
+
+
 driver.findElement(By.xpath("//button[@id='blog-submit-button-save']")).click();
 
+
+
+
     }
+
+
 }
