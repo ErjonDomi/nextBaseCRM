@@ -19,7 +19,7 @@ public class OguzhanTask1 {
         driver.findElement(By.name("USER_PASSWORD")).sendKeys("UserUser");
         driver.findElement(By.className("login-btn")).click();
 
-       driver.findElement(By.xpath("//div[@id='microoPostFormLHE_blogPostForm_inner']")).click();
+        driver.findElement(By.xpath("//div[@id='microoPostFormLHE_blogPostForm_inner']")).click();
         WebElement frame=driver.findElement(By.xpath("//*[@id=\"bx-html-editor-iframe-cnt-idPostFormLHE_blogPostForm\"]/iframe"));
         driver.switchTo().frame(frame);
         driver.findElement(By.xpath("/html/body")).sendKeys("Hi Everyone! How is everything going?");
