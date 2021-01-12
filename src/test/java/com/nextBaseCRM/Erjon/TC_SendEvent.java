@@ -13,12 +13,13 @@ import java.util.concurrent.TimeUnit;
 
 public class TC_SendEvent {
     WebDriver driver;
-    @BeforeClass
+
+    @BeforeMethod
     public void setupClass() throws InterruptedException {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.get("http://login2.nextbasecrm.com/");
         WebElement username = driver.findElement(By.name("USER_LOGIN"));//locating username
         username.sendKeys("helpdesk32@cybertekschool.com");//entering username
@@ -37,7 +38,7 @@ public class TC_SendEvent {
         //locating the element name input box
         WebElement eventName=  driver.findElement(By.xpath("//input[@id='feed-cal-event-namecal_3Jcl' and @name='EVENT_NAME']"));
         eventName.sendKeys("Cybertek");//element name set to Cybertek
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         //locating send button and clicking on it
         WebElement sendButton= driver.findElement(By.id("blog-submit-button-save"));
@@ -117,7 +118,7 @@ public class TC_SendEvent {
         //selecting all the employees for the meeting
         WebElement selectedMembers = driver.findElement(By.xpath("//*[@id=\"calnAJEM3_last_UA\"]/div[3]/div"));
         selectedMembers.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
 
         //locating send button and clicking on it
@@ -176,12 +177,12 @@ public class TC_SendEvent {
         //Locating All day checkbox and clicking on it
         WebElement selectAllDay= driver.findElement(By.xpath("//input[@id='event-full-daycal_3Jcl' and @name='EVENT_FULL_DAY']"));
         selectAllDay.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         //locating set reminder check box and clicking in it
         WebElement setReminderCheckBox = driver.findElement(By.xpath("//input[@ class='feed-event-rem-ch' and @name='EVENT_REMIND' and @type='checkbox'] "));
         // setReminderCheckBox.click();
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         //Setting the reminder for minutes or hours or days
         Select setReminder = new Select(driver.findElement(By.xpath("//select[@id='event-remind_typecal_3Jcl' and @name='EVENT_REMIND_TYPE']")));
@@ -192,7 +193,7 @@ public class TC_SendEvent {
         WebElement countOFMinHourDays = driver.findElement(By.xpath("//input[@class='calendar-inp' and @name='EVENT_REMIND_COUNT']"));
         countOFMinHourDays.clear();//clearing the input box
         countOFMinHourDays.sendKeys("2"); //setting the reminder for 2 days
-        Thread.sleep(1000);
+        Thread.sleep(2000);
 
         //locating event location input box
         WebElement eventLocation = driver.findElement(By.xpath("//input[@id='event-locationcal_3Jcl' and @class='calendar-inp calendar-inp-time calendar-inp-loc']"));
@@ -207,7 +208,7 @@ public class TC_SendEvent {
         //selecting all the employees for the meeting
         WebElement selectedMembers = driver.findElement(By.xpath("//*[@id=\"calnAJEM3_last_UA\"]/div[3]/div"));
         selectedMembers.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
 
         //locating send button and clicking on it
@@ -287,7 +288,7 @@ public class TC_SendEvent {
         //selecting all the employees for the meeting
         WebElement selectedMembers = driver.findElement(By.xpath("//*[@id=\"calnAJEM3_last_UA\"]/div[3]/div"));
         selectedMembers.click();
-        Thread.sleep(1000);
+        Thread.sleep(3000);
 
         //locating cancel button and clicking on it
         WebElement cancelButton = driver.findElement(By.id("blog-submit-button-cancel"));
@@ -295,13 +296,9 @@ public class TC_SendEvent {
 
     }
 
-  /*  @AfterClass
+   @AfterMethod
     public void tearDown(){
         driver.close();
     }
-
-   */
-
-
 
 }
