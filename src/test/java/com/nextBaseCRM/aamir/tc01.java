@@ -53,11 +53,11 @@ driver.findElement(By.xpath("//input[@name='UF_BLOG_POST_VOTE_n0_DATA[QUESTIONS]
 Thread.sleep(2000);
 
         //Clicking the send button to publish
-//driver.findElement(By.xpath("//button[@id='blog-submit-button-save']")).click();
+driver.findElement(By.xpath("//button[@id='blog-submit-button-save']")).click();
 
 
 // Verify users can cancel poll.
-        driver.findElement(By.xpath("//*[@id=\"blog-submit-button-cancel\"]")).click();
+       // driver.findElement(By.xpath("//*[@id=\"blog-submit-button-cancel\"]")).click();
 
 
 
