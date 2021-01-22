@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 
 public class UserClockInTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         //1.Set up driver
         WebDriver driver = WebDriverFactory.getDriver("chrome");
@@ -18,7 +18,7 @@ public class UserClockInTest {
         WebElement username = driver.findElement(By.name("USER_LOGIN"));
 
         //log in
-        username.sendKeys("helpdesk31@cybertekschool.com");
+        username.sendKeys("helpdesk12@cybertekschool.com");
 
         WebElement password = driver.findElement(By.name("USER_PASSWORD"));
         password.sendKeys("UserUser");
@@ -27,10 +27,10 @@ public class UserClockInTest {
         driver.findElement(By.className("login-btn")).click();
 
         // ClockIn
+        driver.findElement(By.id("timeman-status")).click();
+        Thread.sleep(2000);
 
-
-
-
+        driver.findElement(By.cssSelector("td.tm-popup-timeman-layout-button > div > span > span")).click();
 
 
     }
