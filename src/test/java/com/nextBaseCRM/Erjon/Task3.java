@@ -42,6 +42,7 @@ public class Task3 {
         driver.switchTo().parentFrame();
         Thread.sleep(1000);
 
+
         //locating start date input box
         WebElement startDate = driver.findElement(By.xpath("//input[@name='DATE_FROM']"));
         startDate.clear();//clearing the input box
