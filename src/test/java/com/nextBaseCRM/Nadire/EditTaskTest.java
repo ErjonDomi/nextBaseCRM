@@ -1,53 +1,58 @@
 package com.nextBaseCRM.Nadire;
 
 import com.nextBaseCRM.utilities.WebDriverFactory;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class EditTaskTest {
 
-    public static void main(String[] args) {
-        //1.Set up driver
-        WebDriver driver = WebDriverFactory.getDriver("chrome");
+        public static void main(String[] args) throws InterruptedException {
 
-        //open url
-        driver.get("url");
+            //1.Set up driver
+            WebDriver driver = WebDriverFactory.getDriver("chrome");
 
-        //log in
+            //open url
+            driver.get("http://login2.nextbasecrm.com/");
 
-        // click...
+            WebElement username = driver.findElement(By.name("USER_LOGIN"));
+
+            //log in
+            username.sendKeys("helpdesk12@cybertekschool.com");
+
+            WebElement password = driver.findElement(By.name("USER_PASSWORD"));
+            password.sendKeys("UserUser");
+
+            // click...
+            driver.findElement(By.className("login-btn")).click();
+
+            // ClockIn
+            driver.findElement(By.id("timeman-status")).click();
+            Thread.sleep(2000);
+
+            driver.findElement(By.cssSelector("td.tm-popup-timeman-layout-button > div > span > span")).click();
+            Thread.sleep(2000);
+
+            /*
+            // ClockOut
+            driver.findElement(By.id("timeman-status")).click();
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//span[@class='webform-small-button-text']")).click();
+             */
+
+            //EditTask
+            driver.findElement(By.xpath("//input[@class='tm-popup-task-form-textbox']"))
+                    .sendKeys("Enter a new task");
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//span[@class='tm-popup-task-form-submit']")).click();
+
+
+
+
+
+
 
     }
 }
-
-/*
-
-    public static void main(String[] args) {
-        //1.Set up driver
-        WebDriverManager.chromedriver().setup();
-
-        // 2.Open browser
-        WebDriver driver = new ChromeDriver();
-
-        // 3.Get webpage: https://www.facebook.com
-        driver.get("https://www.facebook.com");
-
-
-        // 4.Use .getTitle() method, and store the actual title in a String
-        String actualTitle = driver.getTitle();
-
-        // 5.Create expectedTitleString
-        String expectedTitle = "Facebook - Log In or Sign Up";
-
-        // 6.Create if conditions to do your verification
-        if (actualTitle.equals(expectedTitle)){
-            System.out.println("Title verification PASSED!");
-        }else {
-            System.out.println("Title verification FAILED!!!");
-        }
-
-        driver.close();
-
-
-    }
-
- */
