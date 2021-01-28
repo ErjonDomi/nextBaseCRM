@@ -62,6 +62,7 @@ public class TC_SendEvent {
         driver.switchTo().frame(frame);
         driver.findElement(By.xpath("/html/body")).sendKeys("Hello");
         driver.switchTo().parentFrame();
+
         Thread.sleep(1000);
 
         //locating start date input box
@@ -298,7 +299,7 @@ public class TC_SendEvent {
 
    @AfterMethod
     public void tearDown(){
-        driver.close();
+       // driver.close();
     }
 
 }
